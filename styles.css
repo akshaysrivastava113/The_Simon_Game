@@ -1,13 +1,13 @@
 body {
     text-align: center;
-    background-color: #011F3F;
+    background-color: #fefbec;
   }
   
   #level-title {
     font-family: 'Press Start 2P', cursive;
     font-size: 2rem;
     margin:  5%;
-    color: #FEF2BF;
+    color: #7d655c;
   }
   
   .container {
@@ -22,17 +22,21 @@ body {
     display: inline-block;
     height: 150px;
     width: 150px;
-    border: 10px solid black;
+    border: 5px solid black;
     border-radius: 20%;
   }
-  
+
+  .btn:active {
+      opacity: 0.5;
+      border: 5px solid white;
+  }
   .game-over {
     background-color: red;
     opacity: 0.8;
   }
   
   .red {
-    background-color: red;
+    background-color: rgb(255, 115, 115);
   }
   
   .green {
@@ -51,4 +55,14 @@ body {
     box-shadow: 0 0 20px white;
     background-color: grey;
   }
+
+  @keyframes blink {
+    0%   {opacity: 1.0;}
+    50%  {opacity: 0.5; background-color: lightgray;}
+    100% {background-color: 1.0;}
+  }
   
+  .animate-seq {
+    animation-name: blink;
+    animation-duration: 2s;
+  }
